@@ -4,12 +4,15 @@ This repository contains technical home tasks of:
  - http://ptsv2.com/t/ and https://www.tesonet.com/career/ - automation task (http://ptsv2.com/t/ api is broken)
  - https://api.nordvpn.com/v1/helpers/ips/insights and https://nordcheckout.com/api-pricing
 
+Under this direcotry there is two solutions: 
+- codecept_nord_home_task_solution_1: CodeceptJS + Axios (Node.js) [integreation] and CodeceptJS + Playwright(Node.js) [e2e]
+- jasmine_nord_home_task_solution_2: tried Jasmine implementation: Jasmine + Axios (Node.js) [integreation]
 
 # Installation
-
-1. Install, Node and npm (make sure you are using Long Term Support node version 18.x.x)
+1. Open solution folder `codecept_nord_home_task_solution_1`
+2. Install, Node and npm (make sure you are using Long Term Support node version 18.x.x)
    -- find out which node version you have by using 'node -v' command.
-2. Run npm install
+3. Run npm install
 
 # Technologies
 - For E2E (front-end): CodeceptJS + Playwright(Node.js)
@@ -18,6 +21,9 @@ This repository contains technical home tasks of:
 With CodeceptJS I have ability to write same code base for E2E and integrations tests.
 
 # Executing tests
+
+Open solutions folder: 
+   codecept_nord_home_task_solution_1 or cd codecept_nord_home_task_solution_1
 
 Run Integration (api) tests [TASK1]:
 - npm run test-api-insights
