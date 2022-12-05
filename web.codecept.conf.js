@@ -6,13 +6,22 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://www.tesonet.com',
-      show: false, // headless mode should be false by default; turn on only for debugging. 
-      browser: 'chromium'
+      show: false, // headless mode should be true; 
+      browser: 'chromium',
     },
+    REST: {
+      prettyPrintJson: true,
+    },
+    JSONResponse: {},
   },
   include: {
     I: './steps_file.js',
     careerCategoriesPage: './web/tests/pageObjects/careerCategoriesPage.js',
+    productPage: './web/tests/pageObjects/productPage.js',
+    planPage: './web/tests/pageObjects/planPage.js',
+    logInPage: './web/tests/pageObjects/logInPage.js',
+    paymentPage: './web/tests/pageObjects/paymentPage.js',
+    paymentApiPage: './api/tests/pageObjects/paymentApiPage.js',
   },
   mocha: {
     reporterOptions: {

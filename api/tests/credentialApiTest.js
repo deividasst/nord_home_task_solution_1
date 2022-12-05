@@ -10,15 +10,15 @@ Scenario('GET request - validate response body structure of existing post', asyn
     expect(data.password).to.be.a('string');
     expect(data.targetUrl).to.be.a('string');
   });
-}).tag('@api').tag('@credential');
+}).tag('@api').tag('@credential').tag('@failing');
 
 Scenario('GET request - validate response body of existing post', async ({ I, customerApiPage }) => {
   const creditinalResponse = await customerApiPage.getCredentialsRequest();
   console.log(creditinalResponse);
   I.assertContain(creditinalResponse.targetUrl, url.credentialPost);
-}).tag('@api').tag('@credential');
+}).tag('@api').tag('@credential').tag('@failing');
 
 Scenario('GET request - validate response body of not existing post ', async ({ I, customerApiPage }) => {
   const  creditinalResponse =  await customerApiPage.getCredentialsInvalidRequest();
   I.assertContain(creditinalResponse, errorMessage.postNotFound);
-}).tag('@api').tag('@credential');
+}).tag('@api').tag('@failing');

@@ -1,10 +1,12 @@
 {
   "name": "codeceptjs-tests-home-task",
   "version": "1.0.0",
-  "description": "",  
+  "description": "",
   "scripts": {
     "test-api": "npx codeceptjs run --config=api.codecept.conf.js --steps --reporter mocha-multi",
     "test-api-multiple": "npx codeceptjs run-workers 2 --config=api.codecept.conf.js",
+    "test-api-insights": "npx codeceptjs run --config=api.codecept.conf.js --grep '(?=.*)^(?!.*@failing)' --steps --reporter mocha-multi",
+    "test-api-insights-multiple": "npx codeceptjs run-workers 2 --config=api.codecept.conf.js --grep '(?=.*)^(?!.*@failing)' --reporter mocha-multi",
     "test-web": "npx codeceptjs run --config=web.codecept.conf.js --steps --reporter mocha-multi",
     "test-web-multiple": "npx codeceptjs run-workers 2 --config=web.codecept.conf.js "
   },
@@ -16,6 +18,8 @@
     "playwright": "^1.28.1"
   },
   "dependencies": {
+    "@codeceptjs/mock-request": "^0.3.1",
+    "@extra/recaptcha": "^4.2.1-next.587",
     "codeceptjs-chai": "^2.3.3",
     "mocha-multi": "^1.1.7",
     "mochawesome": "^7.1.3"

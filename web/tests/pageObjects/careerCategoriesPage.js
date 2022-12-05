@@ -1,6 +1,5 @@
 module.exports = {
 
-  // setting locators
   menuItem: {
     career: '#menu-item-19',
   },

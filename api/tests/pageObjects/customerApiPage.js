@@ -2,7 +2,6 @@ const { I } = inject();
 const { url } = require('../../../data/apiUrlData');
 
 module.exports = {
-  // introducing methods
   async getCredentialsRequest() {
     const response = await  I.sendGetRequest(url.validTarget);
     I.assertEqual(response.status, 200);

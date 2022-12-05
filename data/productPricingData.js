@@ -1,0 +1,15 @@
+
+
+module.exports = {
+    requestBody: {
+        "query": "query getCartPlan($id: ID!, $packageId: String, $crossSellPackageId: String, $countryCode: String!, $currencyCode: String!) {\n  node(id: $id) {\n    ... on PlanPrice {\n      ...CartPricePlan\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment CartPricePlan on PlanPrice {\n  ...PlanPrice\n  plan {\n    ...FullPlan\n    __typename\n  }\n}\n\nfragment PlanPrice on PlanPrice {\n  id\n  total: totalDecimal\n  atomic: atomicDecimal\n  currency {\n    code\n    __typename\n  }\n  packageAwarePrice(packageIdentifier: $packageId) {\n    atomicBeforeDiscount: atomicBeforeDiscountDecimal\n    totalBeforeDiscount: totalBeforeDiscountDecimal\n    percentageDiscount\n    __typename\n  }\n}\n\nfragment FullPlan on Plan {\n  ...Plan\n  crossSellPlans(packageIdentifier: $crossSellPackageId) {\n    ...CrossSellPlan\n    __typename\n  }\n}\n\nfragment Plan on Plan {\n  ...SimplePlan\n  price(countryCode: $countryCode, currencyCode: $currencyCode) {\n    ...PlanPrice\n    __typename\n  }\n  introductoryParent {\n    period {\n      ...Period\n      __typename\n    }\n    price(countryCode: $countryCode, currencyCode: $currencyCode) {\n      ...PlanPrice\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment SimplePlan on Plan {\n  __typename\n  id\n  identifier\n  merchant\n  remoteID\n  period {\n    ...Period\n    __typename\n  }\n  extraPeriod {\n    ...Period\n    __typename\n  }\n  ... on CouponPlan {\n    coupon {\n      code\n      isExtraValue\n      __typename\n    }\n    __typename\n  }\n  ... on NordLockerPlan {\n    quotaStorageSize\n    __typename\n  }\n  ... on NordPassPlan {\n    subgroup\n    __typename\n  }\n  services {\n    ...PlanService\n    __typename\n  }\n}\n\nfragment Period on Period {\n  identifier\n  interval\n  unit\n}\n\nfragment PlanService on Service {\n  ... on OptionalService {\n    identifier\n    price(countryCode: $countryCode, currencyCode: $currencyCode) {\n      id\n      total: totalDecimal\n      atomic: atomicDecimal\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment CrossSellPlan on Plan {\n  ...SimplePlan\n  price(countryCode: $countryCode, currencyCode: $currencyCode) {\n    ...CrossSellPlanPrice\n    __typename\n  }\n}\n\nfragment CrossSellPlanPrice on PlanPrice {\n  id\n  total: totalDecimal\n  atomic: atomicDecimal\n  currency {\n    code\n    __typename\n  }\n  packageAwarePrice(packageIdentifier: $crossSellPackageId) {\n    atomicBeforeDiscount: atomicBeforeDiscountDecimal\n    totalBeforeDiscount: totalBeforeDiscountDecimal\n    percentageDiscount\n    __typename\n  }\n}",
+        "operationName": "getCartPlan",
+        "variables": {
+            "packageId": "oct_19th_2022_cyber_month_cd_expired",
+            "crossSellPackageId": "oct_19th_2022_cyber_month",
+            "id": "MjpYUU1aTll1Sjd0TFdqbVZRSnlVOThGWFZSTXVaSkJLa0Z5SDhBcW1Wa3pFPTpQcmljZVYyOjMwMzQuTFQuRVVSLjI4LjY3MzU=",
+            "countryCode": "LT",
+            "currencyCode": "EUR"
+        }
+    }
+};  

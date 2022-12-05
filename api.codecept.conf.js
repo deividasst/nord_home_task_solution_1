@@ -20,6 +20,7 @@ exports.config = {
   include: {
     I: './steps_file.js',
     customerApiPage: "./api/tests/pageObjects/customerApiPage.js",
+    insightsApiPage: "./api/tests/pageObjects/insightsApiPage.js",
   },
   mocha: {
     reporterOptions: {
