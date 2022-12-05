@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://www.tesonet.com',
-      show: false, // headless mode should be true; 
+      show: true, // headless mode should be true; 
       browser: 'chromium',
     },
     REST: {
