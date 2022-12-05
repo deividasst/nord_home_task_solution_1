@@ -7,7 +7,7 @@ This repository contains technical home tasks of:
 
 # Installation
 
-1. Install Java, Node and npm (make sure you are using Long Term Support node version 18.x.x)
+1. Install, Node and npm (make sure you are using Long Term Support node version 18.x.x)
    -- find out which node version you have by using 'node -v' command.
 2. Run npm install
 
