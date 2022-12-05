@@ -8,6 +8,13 @@ exports.config = {
       url: 'https://www.tesonet.com',
       show: true, // headless mode should be true; 
       browser: 'chromium',
+      args: [
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+        '--user-data-dir="/tmp/chromium"',
+        '--disable-web-security',
+        '--disable-features=site-per-process',
+      ]
     },
     REST: {
       prettyPrintJson: true,

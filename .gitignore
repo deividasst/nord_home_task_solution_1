@@ -1,7 +1,8 @@
 # Ignore node_modules folder
-node_modules
+codecept_nord_home_task_solution_1/node_modules
+jasmine_nord_home_task_solution_2/node_modules
 # Ignore ouput folders content
-web/output/
-api/output/
+codecept_nord_home_task_solution_1/web/output/
+codecept_nord_home_task_solution_1/api/output/
 # Ignore package-lock file
-/package-lock.json
+codecept_nord_home_task_solution_1/package-lock.json
