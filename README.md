@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains technica home tasks of:
+This repository contains technical home tasks of:
  - http://ptsv2.com/t/ and https://www.tesonet.com/career/ - automation task (http://ptsv2.com/t/ api is broken)
  - https://api.nordvpn.com/v1/helpers/ips/insights and https://nordcheckout.com/api-pricing
 
