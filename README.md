@@ -13,7 +13,9 @@ This repository contains technical home tasks of:
 
 # Technologies
 - For E2E (front-end): CodeceptJS + Playwright(Node.js)
-- For Integration (API): CodeceptJS + Axios (Node.js)
+- For Integration (API): CodeceptJS + Axios (Node.js) -> chose instead of jasmine + Axios because it's easier to set up and execution times are similar.
+
+With CodeceptJS I have ability to write same code base for E2E and integrations tests.
 
 # Executing tests
 
