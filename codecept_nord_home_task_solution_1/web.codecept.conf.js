@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://www.tesonet.com',
-      show: true, // headless mode should be true; 
+      show: false, // headless mode should be false by default; 
       browser: 'chromium',
       args: [
         '--disable-dev-shm-usage',
@@ -20,6 +20,9 @@ exports.config = {
       prettyPrintJson: true,
     },
     JSONResponse: {},
+    ChaiWrapper: {
+      require: 'codeceptjs-chai',
+    },
   },
   include: {
     I: './steps_file.js',

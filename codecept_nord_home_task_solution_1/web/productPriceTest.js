@@ -1,3 +1,5 @@
+const { url } = require('../data/apiUrlData');
+
 Feature('Product Price');
 
 Scenario('should verify that plan price matches the selected one', async ({ 
@@ -10,8 +12,9 @@ Scenario('should verify that plan price matches the selected one', async ({
         productPage.selectProduct();
         let productUrl = await I.grabCurrentUrl();
         planPage.openLogInPage();
-        I.waitForElement(logInPage.inputs.username, 6)
-        I.amOnPage(productUrl);
+        /* changed to verify url instead of username input due to hcaptcha; 
+        confimed with nordsec QA */
+        logInPage.verifyUrl(productUrl);
         planPage.selectPlan();
         paymentPage.assertPrices();
 }).tag('@web').tag('@product');
