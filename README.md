@@ -30,15 +30,28 @@ Run E2E (front-end) tests [TASK2]:
 
 For detailed reporting change config to mocha.reporterOptions.codeceptjs-cli-reporter.options.verbose: true
 
+.html report files you can find:
+- api/output/report.html
+- web/output/report.html
+
+# File structure
+Framework configuration:
+- api.codecept.conf.js
+- web.codecept.conf.js
+
+Data test files:
+- data/*
+
+Test files:
+- api/tests/*Test.js
+- web/tests/*Test.js
+
+Page object files:
+- api/tests/pageObjects/*Page.js
+- web/tests/pageObjects/*Page.js
+
 # Additional information about project architecture
 
-We are using helper classes in the project. Helpers are saved in /helpers/ folder and imported in codecept.conf.js files.
+We are using helper classes in the project. Helpers are saved in helpers/ folder.
 
 It is mandatory not to invoke other helpers in a helper file.
-
-- Example => const apiHelper = require('../../../helpers/apiHelper'),
-  should not be invoked in any of the helpers without rechecking that it doesnt break any of existing tests.
-
-If a new helper file is created and if there is a demand to see function reference created by clicking on it (CTRIL + left click),
-then a command needs to be run in the terminal "npx codeceptjs def --config=web.codecept.conf.js" to refresh web.codecept.conf.js
-file structure (notice that web.codecept.conf.js is just an example here and same can be done with api and mobile config files)
