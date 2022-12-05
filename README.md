@@ -65,7 +65,7 @@ Used helper classes in the project. Helpers are saved in helpers/ folder.
 
 It is mandatory not to invoke other helpers in a helper file.
 
-# Comparison: 
+# Comparison - integration tests execution: 
 Without parallelism:
 ![image](https://user-images.githubusercontent.com/21289471/205599174-32877c84-c366-45f7-be51-bead3b28c767.png)
 With: parallelism
