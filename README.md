@@ -16,7 +16,7 @@ Under this direcotry there is two solutions:
 
 # Technologies
 - For E2E (front-end): CodeceptJS + Playwright(Node.js)
-- For Integration (API): CodeceptJS + Axios (Node.js) -> chose instead of Jasmine + Axios because it's easier to set up and execution times are similar.
+- For Integration (API): CodeceptJS + Axios (Node.js) -> chose instead of Jasmine + Axios because it's easier to set up and execution times are similar and using test execution parallelism faster.
 
 With CodeceptJS I have ability to write same code base for E2E and integrations tests.
 Neverless very usefull feature is test execution in parallel [more info: https://codecept.io/parallel/#parallel-execution]
