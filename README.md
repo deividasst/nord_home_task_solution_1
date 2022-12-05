@@ -21,6 +21,22 @@ Under this direcotry there is two solutions:
 With CodeceptJS I have ability to write same code base for E2E and integrations tests.
 Neverless very usefull feature is test execution in parallel [more info: https://codecept.io/parallel/#parallel-execution]
 
+# File structure
+Framework configuration:
+- api.codecept.conf.js
+- web.codecept.conf.js
+
+Data test files:
+- data/*
+
+Test files:
+- api/tests/*Test.js
+- web/tests/*Test.js
+
+Page object files:
+- api/tests/pageObjects/*Page.js
+- web/tests/pageObjects/*Page.js
+
 # Executing tests
 
 Open solutions folder: 
@@ -42,22 +58,6 @@ For detailed reporting change config to mocha.reporterOptions.codeceptjs-cli-rep
 .html report files you can find:
 - api/output/report.html
 - web/output/report.html
-
-# File structure
-Framework configuration:
-- api.codecept.conf.js
-- web.codecept.conf.js
-
-Data test files:
-- data/*
-
-Test files:
-- api/tests/*Test.js
-- web/tests/*Test.js
-
-Page object files:
-- api/tests/pageObjects/*Page.js
-- web/tests/pageObjects/*Page.js
 
 # Additional information about project architecture
 
