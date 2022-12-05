@@ -64,3 +64,9 @@ For detailed reporting change config to mocha.reporterOptions.codeceptjs-cli-rep
 Used helper classes in the project. Helpers are saved in helpers/ folder.
 
 It is mandatory not to invoke other helpers in a helper file.
+
+# Comparison: 
+Without parallelism:
+![image](https://user-images.githubusercontent.com/21289471/205599174-32877c84-c366-45f7-be51-bead3b28c767.png)
+With: parallelism
+![image](https://user-images.githubusercontent.com/21289471/205599468-ec6d2728-7d5f-46a4-8ebc-ea6843efd707.png)
