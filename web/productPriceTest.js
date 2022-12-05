@@ -1,6 +1,6 @@
 Feature('Product Price');
 
-Scenario('should count catogries number on the page', async ({ 
+Scenario('should verify that plan price matches the selected one', async ({ 
     I, 
     productPage, 
     logInPage, 
@@ -9,12 +9,7 @@ Scenario('should count catogries number on the page', async ({
 }) => {
         productPage.selectProduct();
         let productUrl = await I.grabCurrentUrl();
-  
-
-
         planPage.openLogInPage();
-        
-
         I.waitForElement(logInPage.inputs.username, 6)
         I.amOnPage(productUrl);
         planPage.selectPlan();

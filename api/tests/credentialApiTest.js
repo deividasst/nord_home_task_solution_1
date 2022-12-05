@@ -3,7 +3,7 @@ const { errorMessage } = require('../../data/apiErrorMessageData');
 
 Feature('Itegration Credential API');
 
-Scenario('GET request - validate response body structure of existing post', async ({ I, customerApiPage }) => {
+Scenario('should be 200 status api response with valid structure', async ({ I, customerApiPage }) => {
   await customerApiPage.getCredentialsRequest();
   I.seeResponseValidByCallback(({ data, expect }) => {
     expect(data.username).to.be.a('string');
@@ -12,13 +12,12 @@ Scenario('GET request - validate response body structure of existing post', asyn
   });
 }).tag('@api').tag('@credential').tag('@failing');
 
-Scenario('GET request - validate response body of existing post', async ({ I, customerApiPage }) => {
+Scenario('should be 200 status api response with valid url', async ({ I, customerApiPage }) => {
   const creditinalResponse = await customerApiPage.getCredentialsRequest();
-  console.log(creditinalResponse);
   I.assertContain(creditinalResponse.targetUrl, url.credentialPost);
 }).tag('@api').tag('@credential').tag('@failing');
 
-Scenario('GET request - validate response body of not existing post ', async ({ I, customerApiPage }) => {
+Scenario('should be 404 status for not existing page', async ({ I, customerApiPage }) => {
   const  creditinalResponse =  await customerApiPage.getCredentialsInvalidRequest();
   I.assertContain(creditinalResponse, errorMessage.postNotFound);
 }).tag('@api').tag('@failing');
