@@ -13,7 +13,7 @@ This repository contains technical home tasks of:
 
 # Technologies
 - For E2E (front-end): CodeceptJS + Playwright(Node.js)
-- For Integration (API): CodeceptJS + Axios (Node.js) -> chose instead of jasmine + Axios because it's easier to set up and execution times are similar.
+- For Integration (API): CodeceptJS + Axios (Node.js) -> chose instead of Jasmine + Axios because it's easier to set up and execution times are similar.
 
 With CodeceptJS I have ability to write same code base for E2E and integrations tests.
 
@@ -54,6 +54,6 @@ Page object files:
 
 # Additional information about project architecture
 
-We are using helper classes in the project. Helpers are saved in helpers/ folder.
+Used helper classes in the project. Helpers are saved in helpers/ folder.
 
 It is mandatory not to invoke other helpers in a helper file.
